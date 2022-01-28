@@ -44,9 +44,8 @@ const StateData = (props) => {
       <MyResponsivePie data={graphData} />
       <Grid container spacing={2}>
         {cardData.map((data) => (
-          <Grid item sm={3}>
+          <Grid item md={3} xs={6} key={data.label}>
             <StateDataCard
-              key={data.label}
               name={data.label}
               value={data.value}
               color={data.color}

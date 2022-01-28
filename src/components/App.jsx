@@ -9,19 +9,25 @@ import State from "./pages/State";
 import { ThemeProvider } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
 import { lightTheme, darkTheme } from "../themes";
-import { useState } from "react";
+import React, { useState } from "react";
+import ButtonAppBar from "./AppBar";
 
 const App = () => {
+  const [drawerState, setDrawerState] = useState(false)
   const [mode, setMode] = useState(false);
   const handleMode = () => {
     setMode(!mode);
   };
+  const handleDrawer = (open)=>{
+    setDrawerState(open)
+  }
   return (
     <Router>
       <ThemeProvider theme={mode ? darkTheme : lightTheme}>
         <CssBaseline />
-        <div className="App">
-          <DrawerLeft modeChange={handleMode} isDark={mode} />
+        <div className=''>
+          <ButtonAppBar drawer={drawerState} setDrawer={handleDrawer} />
+          <DrawerLeft modeChange={handleMode} isDark={mode} setDrawer={handleDrawer} drawer={drawerState} />
           <Routes>
             <Route path="/" element={<India />} />
             <Route path="/states" element={<StateWise />} />
