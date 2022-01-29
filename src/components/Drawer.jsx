@@ -51,7 +51,7 @@ const DrawerLeft = (props) => {
             { name: "State Wise", path: "/states" },
           ].map((text, index) => (
             <Link to={text.path} className="link" key={text.name}>
-              <ListItem button>
+              <ListItem button onClick={()=> setDrawer(false)}>
                 <ListItemIcon>
                   {index === 0 ? <FlagIcon /> : <HomeIcon />}
                 </ListItemIcon>
@@ -67,7 +67,7 @@ const DrawerLeft = (props) => {
             { name: "About", path: "/about" },
           ].map((text, index) => (
             <Link to={text.path} className="link" key={text.name}>
-              <ListItem button>
+              <ListItem button onClick={()=> setDrawer(false)}>
                 <ListItemIcon>
                   {index === 0 ? <PublicIcon /> : <InfoIcon />}
                 </ListItemIcon>

@@ -12,11 +12,6 @@ const StateData = (props) => {
       value: props.active,
       color: red[500],
     },
-    // {
-    //   id: "recovered",
-    //   label: "recovered",
-    //   value: props.recovered,
-    // },
     {
       id: "deaths",
       label: "deaths",
@@ -42,7 +37,7 @@ const StateData = (props) => {
   return (
     <div className="state-card">
       <MyResponsivePie data={graphData} />
-      <Grid container spacing={2}>
+      <Grid className="state-info-grid" container spacing={2}>
         {cardData.map((data) => (
           <Grid item md={3} xs={6} key={data.label}>
             <StateDataCard
