@@ -50,3 +50,9 @@ text{
 .MuiCardContent-root{
   height: 8rem;
 }
+.coming-soon{
+  text-align: center;
+}
+.about-page{
+  padding: 1rem 2rem;
+}

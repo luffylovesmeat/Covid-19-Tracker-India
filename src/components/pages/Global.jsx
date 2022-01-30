@@ -1,9 +1,11 @@
 import React from "react";
 
-const Global = ()=>{
-    return(
-        <h1>Hello Everyone</h1>
-    )
-}
+const Global = () => {
+  return (
+    <div className="coming-soon">
+      <h1>Coming Soon...</h1>
+    </div>
+  );
+};
 
-export default Global
+export default Global;
