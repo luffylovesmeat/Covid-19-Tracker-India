@@ -1,2 +1,2 @@
-const apiHost = "https://covid-19-api-in.herokuapp.com/api/v1/";
+const apiHost = "https://codiv-api-in.onrender.com";
 export default apiHost;
